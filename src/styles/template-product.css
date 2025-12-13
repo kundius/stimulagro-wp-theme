@@ -401,6 +401,7 @@
   right: calc(var(--container-padding) * 0.75);
   top: calc(var(--container-padding) * 0.75);
   bottom: calc(var(--container-padding) * 0.75);
+  /*minmax?*/
   border-style: solid;
   border-width: 2px;
   border-color: rgb(255, 255, 255);
