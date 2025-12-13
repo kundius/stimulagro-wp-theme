@@ -17,6 +17,8 @@
   justify-content: space-between;
   height: var(--header-height);
   gap: 32px;
+  padding-left: var(--add-padding);
+  padding-right: var(--add-padding);
 }
 
 .header-toggle {
@@ -87,7 +89,7 @@
 .header-instruction {
   position: absolute;
   left: calc((100vw - 1920px) / 2 + (var(--container-padding) / 2));
-  top: calc(var(--header-height) + var(--wp-admin--admin-bar--height) + 16px);
+  top: calc(var(--header-height) + var(--wp-admin--admin-bar--height, 0px) + 16px);
   font-size: 16px;
   line-height: 1;
   background: #78a28d;
@@ -122,7 +124,7 @@
 .header-call {
   --size: 54px;
 
-  position: absolute;
+  position: fixed;
   right: calc((100vw - 1920px) / 2 + (var(--container-padding) / 2));
   top: 16px;
   top: 50%;

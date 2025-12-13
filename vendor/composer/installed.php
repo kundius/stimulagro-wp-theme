@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => '__root__',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => null,
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
+        'reference' => 'afa7d1837218afdbb29f69d08ca24c48081db1f8',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         '__root__' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => null,
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
+            'reference' => 'afa7d1837218afdbb29f69d08ca24c48081db1f8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -27,6 +27,15 @@
             'install_path' => __DIR__ . '/../htmlburger/carbon-fields',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'php-stubs/wordpress-stubs' => array(
+            'pretty_version' => 'v6.9.0',
+            'version' => '6.9.0.0',
+            'reference' => '5171cb6650e6c583a96943fd6ea0dfa3e1089a8a',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../php-stubs/wordpress-stubs',
+            'aliases' => array(),
+            'dev_requirement' => true,
         ),
     ),
 );
