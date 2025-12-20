@@ -36,5 +36,35 @@ function register_carbon_fields_blocks()
       Field::make('rich_text', 'about_primary_content', 'Описание основное'),
       Field::make('rich_text', 'about_secondary_content', 'Описание дополнительное'),
     ])
-    ->add_tab('Уникальный продукт', [Field::make('rich_text', 'unique_content', 'Описание')]);
+    ->add_tab('Уникальность', [Field::make('rich_text', 'unique_content', 'Описание')])
+    ->add_tab('Использование', [
+      Field::make('textarea', 'usage_title', 'Заголовок')->set_rows(2),
+      Field::make('rich_text', 'usage_content', 'Описание'),
+      Field::make('textarea', 'usage_warning', 'Предупреждение')->set_rows(2),
+      Field::make('complex', 'options', 'Опции')->add_fields([
+        Field::make('image', 'photo', 'Фото')->set_help_text('Изображение размером 300х200'),
+        Field::make('textarea', 'name', 'Название')->set_rows(2),
+        Field::make('textarea', 'content', 'Значение')->set_rows(2),
+      ]),
+      Field::make('complex', 'specifications', 'Характеристики')->add_fields([
+        Field::make('image', 'photo', 'Фото')->set_help_text('Изображение размером 128х64'),
+        Field::make('textarea', 'name', 'Название')->set_rows(2),
+        Field::make('textarea', 'content', 'Значение')->set_rows(2),
+      ]),
+    ])
+    ->add_tab('Испытания', [
+      Field::make('textarea', 'trials_title', 'Заголовок')->set_rows(2),
+      Field::make('textarea', 'trials_title_alt', 'Дполнительный заголовок')->set_rows(2),
+      Field::make('text', 'trials_more_link', 'Ссылка подробнее'),
+      Field::make('image', 'trials_image', 'Фото'),
+      Field::make('rich_text', 'trials_text_1', 'Описание 1'),
+      Field::make('rich_text', 'trials_text_2', 'Описание 2'),
+      Field::make('rich_text', 'trials_text_3', 'Описание 3'),
+      Field::make('association', 'trials_categories', 'Рубрики')->set_types([
+        [
+          'type' => 'term',
+          'taxonomy' => 'category',
+        ],
+      ]),
+    ]);
 }
