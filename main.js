@@ -10,9 +10,11 @@ import fslightbox from 'fslightbox'
 import { Mask, MaskInput } from 'maska'
 import { initCallButton } from './src/scripts/call-button'
 import { initModal } from './src/scripts/modal'
+import { initMobileMenu } from './src/scripts/mobile-menu'
 
 new MaskInput('[data-maska]')
 
 initStickyHeader()
 initModal()
 initCallButton()
+initMobileMenu()

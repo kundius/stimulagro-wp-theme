@@ -1,8 +1,9 @@
 <div class="header" data-sticky-header data-mobile-menu-state="closed">
   <div class="container">
     <div class="header__container">
-      <button type="button" class="header-toggle" data-drawer-open="nav">
+      <button type="button" class="header-toggle" data-mobile-menu-toggle>
         <span class="icon icon-menu"></span>
+        <span class="icon icon-close"></span>
       </button>
 
       <?php wp_nav_menu([

@@ -11,11 +11,28 @@ add_action('after_setup_theme', function () {
 add_action('carbon_fields_register_fields', 'register_carbon_fields_blocks');
 function register_carbon_fields_blocks()
 {
+  Container::make('post_meta', 'SEO')
+    ->where('post_type', '=', 'page')
+    ->or_where('post_type', '=', 'post')
+    ->add_fields([
+      Field::make('text', 'crb_seo_title', 'Заголовок'),
+      Field::make('text', 'crb_seo_keywords', 'Ключевые слова'),
+      Field::make('textarea', 'crb_seo_description', 'Описание'),
+    ]);
+
   Container::make('theme_options', 'Параметры')
-    ->add_tab('Общее', [Field::make('text', 'crb_theme_phone', 'Телефон')])
+    ->add_tab('Общее', [
+      Field::make('text', 'crb_theme_phone', 'Телефон'),
+      Field::make('text', 'crb_theme_email', 'E-mail'),
+      Field::make('textarea', 'crb_theme_address', 'Адерс')->set_rows(2),
+    ])
     ->add_tab('Подвал', [
-      Field::make('textarea', 'crb_footer_info', 'Информация')->set_rows(2),
+      Field::make('textarea', 'crb_footer_counters', 'Счетчики')->set_rows(2),
       Field::make('textarea', 'crb_footer_copyright', 'Копирайт')->set_rows(2),
+      Field::make('complex', 'crb_footer_groups', 'Соцсети')->add_fields([
+        Field::make('text', 'link', 'Ссылка'),
+        Field::make('textarea', 'icon', 'Код иконки')->set_rows(2),
+      ]),
     ]);
 
   Container::make('post_meta', 'Продукт')

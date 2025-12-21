@@ -146,21 +146,19 @@ Template Name: Продукт
               </div>
               <?php endif; ?>
               <?php if ($options = carbon_get_the_post_meta('options')): ?>
-              <div class="usage__options">
-                <?php foreach ($options as $option): ?>
-                  <div class="usage-option">
-                    <div class="usage-option__image">
-                      <?php echo wp_get_attachment_image($option['photo'], 'full'); ?>
-                    </div>
-                    <div class="usage-option__name">
-                      <?php echo nl2br($option['name']); ?>
-                    </div>
-                    <div class="usage-option__content">
-                      <?php echo nl2br($option['content']); ?>
-                    </div>
+              <?php foreach ($options as $option): ?>
+                <div class="usage-option">
+                  <div class="usage-option__image">
+                    <?php echo wp_get_attachment_image($option['photo'], 'full'); ?>
                   </div>
-                <?php endforeach; ?>
-              </div>
+                  <div class="usage-option__name">
+                    <?php echo nl2br($option['name']); ?>
+                  </div>
+                  <div class="usage-option__content">
+                    <?php echo nl2br($option['content']); ?>
+                  </div>
+                </div>
+              <?php endforeach; ?>
               <?php endif; ?>
             </div>
             <div class="usage__warning">

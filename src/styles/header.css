@@ -2,35 +2,107 @@
   position: sticky;
   top: var(--wp-admin--admin-bar--height, 0px);
   z-index: 100;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
   background-color: rgba(240, 240, 240, 0.902);
   backdrop-filter: blur(8px);
   transition: 0.3s ease;
 }
 
-.header[data-sticky-header='active'] {
+.header[data-sticky-header='active']::before {
   box-shadow: 0px 15px 16px 0px rgba(83, 112, 98, 0.35);
 }
 
+.header[data-mobile-menu-state='opened']::before {
+  box-shadow: 0px 15px 16px 0px rgba(83, 112, 98, 0.35);
+  height: calc(100% + 156px);
+}
+
 .header__container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: var(--header-height);
+  display: grid;
+  grid-template-columns: 1fr 107px 1fr;
   gap: 32px;
+  align-items: center;
+  /*justify-content: space-between;*/
+  height: var(--header-height);
   padding-left: var(--add-padding);
   padding-right: var(--add-padding);
+
+  @media (--max-xl) {
+    padding-left: 0;
+    padding-right: 0;
+    gap: 16px;
+  }
+
+  @media (--max-lg) {
+    grid-template-columns: auto 1fr 107px 1fr auto;
+  }
 }
 
 .header-toggle {
   display: none;
-  order: 10;
-  flex-shrink: 0;
+
+  @media (--max-lg) {
+    display: flex;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #fff;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #003f13, #56a534);
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+}
+
+.header-toggle .icon-close {
+  display: none;
+}
+
+.header-toggle .icon-menu {
+  display: flex;
+}
+
+.header[data-mobile-menu-state='opened'] .header-toggle .icon-close {
+  display: flex;
+}
+
+.header[data-mobile-menu-state='opened'] .header-toggle .icon-menu {
+  display: none;
 }
 
 .header-nav {
-  width: 100%;
   display: flex;
   justify-content: space-around;
+
+  @media (--max-lg) {
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    padding: var(--container-padding);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+    gap: 8px;
+  }
+}
+
+.header[data-mobile-menu-state='opened'] .header-nav {
+  @media (--max-lg) {
+    visibility: visible;
+    opacity: 1;
+  }
 }
 
 .header-nav li {
@@ -43,6 +115,10 @@
   font-size: 18px;
   line-height: 36px;
   position: relative;
+
+  @media (--max-xl) {
+    font-size: 16px;
+  }
 }
 
 .header-nav li a::before {
@@ -73,23 +149,48 @@
 }
 
 .header-nav--left {
-  order: 30;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+
+  @media (--max-lg) {
+    right: 50%;
+    left: 0;
+    padding-right: 0;
+  }
 }
 
 .header-nav--right {
-  order: 50;
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+
+  @media (--max-xl) {
+    padding-right: 36px;
+  }
+
+  @media (--max-lg) {
+    right: 0;
+    left: 50%;
+    padding-right: var(--container-padding);
+    padding-left: 0;
+  }
 }
 
 .header-logo {
   display: flex;
   flex-shrink: 0;
-  order: 40;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+
+  @media (--max-lg) {
+    grid-column: 3 / 4;
+  }
 }
 
 .header-instruction {
+  --top: 16px;
   position: absolute;
   left: calc((100vw - 1920px) / 2 + (var(--container-padding) / 2));
-  top: calc(var(--header-height) + var(--wp-admin--admin-bar--height, 0px) + 16px);
+  top: calc(var(--header-height) + var(--wp-admin--admin-bar--height, 0px) + var(--top));
   font-size: 16px;
   line-height: 1;
   background: #78a28d;
@@ -101,10 +202,21 @@
   border-radius: 23px;
   padding: 0 16px;
   gap: 8px;
-  order: 20;
+  z-index: 20;
 
   @media (--max-3xl) {
     left: calc((var(--container-padding) / 2));
+  }
+
+  @media (--max-xl) {
+    --top: 12px;
+  }
+
+  @media (--max-lg) {
+    --top: 8px;
+    height: 36px;
+    font-size: 14px;
+    border-radius: 18px;
   }
 }
 
@@ -155,6 +267,25 @@
 
   @media (--max-2xl) {
     --size: 48px;
+    right: calc(
+      ((100vw - var(--container-width)) / 2) - (var(--container-padding) / 2) +
+        (var(--add-padding) / 2) - (var(--size) / 2)
+    );
+  }
+
+  @media (--max-xl) {
+    --size: 48px;
+    right: calc(((100vw - var(--container-width)) / 2) - var(--container-padding) + 2px);
+  }
+
+  @media (--max-lg) {
+    --size: 48px;
+    position: relative;
+    right: 0;
+    top: 0;
+    grid-column: 5 / 6;
+    grid-row: 1 / 2;
+    transform: none;
   }
 }
 
