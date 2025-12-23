@@ -31,7 +31,9 @@ function feedback_form_callback()
   } else {
     $email_to = get_option('admin_email');
     $rows = [];
+    $rows[] = 'Имя: ' . sanitize_text_field($_POST['name']);
     $rows[] = 'Телефон: ' . sanitize_text_field($_POST['phone']);
+    $rows[] = 'Сообщение: ' . sanitize_text_field($_POST['message']);
     $rows[] = 'Страница: ' . sanitize_text_field($_POST['page']);
     $body = implode("\n", $rows);
     $subject = $_POST['subject'];

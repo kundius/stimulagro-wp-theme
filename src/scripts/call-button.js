@@ -5,7 +5,7 @@ export function applyCallButton(el) {
     if (window.matchMedia('(min-width: 768px)').matches) {
       e.preventDefault()
 
-      MicroModal.show('modal-call', {
+      MicroModal.show('modal-callback', {
         awaitOpenAnimation: true,
         awaitCloseAnimation: true,
         closeTrigger: 'data-modal-close'

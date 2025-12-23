@@ -33,6 +33,15 @@ function register_carbon_fields_blocks()
         Field::make('text', 'link', 'Ссылка'),
         Field::make('textarea', 'icon', 'Код иконки')->set_rows(2),
       ]),
+    ])
+    ->add_tab('Поставки', [
+      Field::make('text', 'crb_delivery_anchor', 'Якорь'),
+      Field::make('textarea', 'crb_delivery_title', 'Заголовок')->set_rows(2),
+      Field::make('rich_text', 'crb_delivery_content', 'Содержание'),
+      Field::make('complex', 'crb_delivery_address', 'Адреса')->add_fields([
+        Field::make('rich_text', 'address', 'Адрес')->set_rows(2),
+        Field::make('rich_text', 'contacts', 'Контакты')->set_rows(2),
+      ]),
     ]);
 
   Container::make('post_meta', 'Продукт')
@@ -48,6 +57,7 @@ function register_carbon_fields_blocks()
       Field::make('textarea', 'intro_description_5', 'Описание 5')->set_rows(2),
     ])
     ->add_tab('О продукте', [
+      Field::make('text', 'about_anchor', 'Якорь'),
       Field::make('textarea', 'about_title', 'Заголовок')->set_rows(2),
       Field::make('image', 'about_image', 'Изображение'),
       Field::make('rich_text', 'about_primary_content', 'Описание основное'),
@@ -55,6 +65,7 @@ function register_carbon_fields_blocks()
     ])
     ->add_tab('Уникальность', [Field::make('rich_text', 'unique_content', 'Описание')])
     ->add_tab('Использование', [
+      Field::make('text', 'usage_anchor', 'Якорь'),
       Field::make('textarea', 'usage_title', 'Заголовок')->set_rows(2),
       Field::make('rich_text', 'usage_content', 'Описание'),
       Field::make('textarea', 'usage_warning', 'Предупреждение')->set_rows(2),
@@ -70,6 +81,7 @@ function register_carbon_fields_blocks()
       ]),
     ])
     ->add_tab('Испытания', [
+      Field::make('text', 'trials_anchor', 'Якорь'),
       Field::make('textarea', 'trials_title', 'Заголовок')->set_rows(2),
       Field::make('textarea', 'trials_title_alt', 'Дполнительный заголовок')->set_rows(2),
       Field::make('text', 'trials_more_link', 'Ссылка подробнее'),

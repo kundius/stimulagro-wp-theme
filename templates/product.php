@@ -16,19 +16,25 @@ Template Name: Продукт
   <div class="flex flex-col min-h-screen">
     <?php get_template_part('partials/header'); ?>
 
+    <a href="#" class="header-instruction">
+      <span class="header-instruction__icon">
+        <span class="icon icon-instruction"></span>
+      </span>
+      <span class="header-instruction__text">
+        Инструкция по применению
+      </span>
+    </a>
+
     <section class="gumat">
       <div class="container">
         <div class="gumat__wrap">
           <div class="gumat__inner">
             <div class="gumat__image-1"></div>
             <div class="gumat__image-2"></div>
-            <div class="gumat__image-3"></div>
             <?php if ($certificate = carbon_get_the_post_meta('intro_certificate')): ?>
             <div class="gumat__certificate"><?php echo nl2br($certificate); ?></div>
             <?php endif; ?>
-            <?php if ($slogan = carbon_get_the_post_meta('intro_slogan')): ?>
-            <div class="gumat__slogan"><?php echo nl2br($slogan); ?></div>
-            <?php endif; ?>
+            <div class="gumat__image-3"></div>
             <?php if ($description_1 = carbon_get_the_post_meta('intro_description_1')): ?>
             <div class="gumat__description_1">
               <span class="gumat__description_1-misc-1"></span>
@@ -69,20 +75,25 @@ Template Name: Продукт
               <?php echo nl2br($description_5); ?>
             </div>
             <?php endif; ?>
+            <?php if ($slogan = carbon_get_the_post_meta('intro_slogan')): ?>
+            <div class="gumat__slogan"><?php echo nl2br($slogan); ?></div>
+            <?php endif; ?>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="about">
+    <section class="about" data-page-anchor-boundary>
       <div class="container">
-        <div name="01" class="page-anchor">01.</div>
+        <div class="page-anchor" data-page-anchor="<?php echo carbon_get_the_post_meta(
+          'about_anchor',
+        ); ?>"></div>
         <?php if ($about_title = carbon_get_the_post_meta('about_title')): ?>
         <div class="about__title">
           <?php echo nl2br($about_title); ?>
         </div>
         <?php endif; ?>
-        <div class="grid grid-cols-2">
+        <div class="about__layout">
           <?php if ($about_image = carbon_get_the_post_meta('about_image')): ?>
           <div class="about__image">
             <div class="about__image-wrapper">
@@ -118,9 +129,11 @@ Template Name: Продукт
 
     <div class="bgs">
       <div class="bgs__wave-logo-b">
-        <section class="usage">
+        <section class="usage" data-page-anchor-boundary>
           <div class="container">
-            <div name="02" class="page-anchor">02.</div>
+            <div class="page-anchor" data-page-anchor="<?php echo carbon_get_the_post_meta(
+              'usage_anchor',
+            ); ?>"></div>
             <div class="usage__title">
               <?php echo nl2br(carbon_get_the_post_meta('usage_title')); ?>
             </div>
@@ -168,9 +181,11 @@ Template Name: Продукт
         </section>
       </div>
       <div class="bgs__white">
-        <section class="trials">
+        <section class="trials" data-page-anchor-boundary>
           <div class="container">
-            <div name="03" class="page-anchor">03.</div>
+            <div class="page-anchor" data-page-anchor="<?php echo carbon_get_the_post_meta(
+              'trials_anchor',
+            ); ?>"></div>
             <div class="trials__title">
               <?php echo nl2br(carbon_get_the_post_meta('trials_title')); ?>
             </div>

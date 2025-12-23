@@ -1,31 +1,29 @@
-<section class="delivery">
+<section class="delivery" data-page-anchor-boundary>
   <div class="container">
-    <div name="04" class="page-anchor">04.</div>
+    <div class="page-anchor" data-page-anchor="<?php echo carbon_get_theme_option(
+      'crb_delivery_anchor',
+    ); ?>"></div>
+    <?php if ($title = carbon_get_theme_option('crb_delivery_title')): ?>
     <div class="delivery__title">
-      Поставки осуществляются<br>
-      по России и за рубеж
+      <?php echo nl2br($title); ?>
     </div>
+    <?php endif; ?>
     <div class="delivery__map">
       <span class="delivery__marker delivery__marker--1"></span>
       <span class="delivery__marker delivery__marker--2"></span>
     </div>
     <div class="delivery__layout">
       <div class="delivery__layout-left">
+        <?php if ($content = carbon_get_theme_option('crb_delivery_content')): ?>
         <div class="delivery__content">
-          <h3 class="delivery__content-title">
-            Предлагаем поставки по России и за рубеж
-          </h3>
-          <ul class="delivery__content-list">
-            <li>Крупными и мелкими партиями</li>
-            <li>Автотранспортом и ж/д транспортом по всей России</li>
-            <li>В страны ближнего и дальнего зарубежья</li>
-          </ul>
+          <?php echo wpautop($content); ?>
         </div>
+        <?php endif; ?>
       </div>
       <div class="delivery__layout-right">
-        <a href="#" class="button-primary">
+        <button type="button" class="button-primary" data-callback-button>
           Связаться с менеджером<span class="button-primary__arrow"></span>
-        </a>
+        </button>
       </div>
     </div>
   </div>

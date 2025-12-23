@@ -37,13 +37,4 @@
   </div>
 </div>
 
-<a href="" class="header-instruction">
-  <span class="header-instruction__icon">
-    <span class="icon icon-instruction"></span>
-  </span>
-  <span class="header-instruction__text">
-    Инструкция по применению
-  </span>
-</a>
-
 <div class="header-anchor" data-sticky-header-anchor></div>

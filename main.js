@@ -9,12 +9,14 @@ import { initStickyHeader } from './src/scripts/sticky-header'
 import fslightbox from 'fslightbox'
 import { Mask, MaskInput } from 'maska'
 import { initCallButton } from './src/scripts/call-button'
-import { initModal } from './src/scripts/modal'
 import { initMobileMenu } from './src/scripts/mobile-menu'
+import { initCallbackButton } from './src/scripts/callback-button'
+import { initPageAnchor } from './src/scripts/page-anchor'
 
 new MaskInput('[data-maska]')
 
 initStickyHeader()
-initModal()
 initCallButton()
 initMobileMenu()
+initCallbackButton()
+initPageAnchor()
