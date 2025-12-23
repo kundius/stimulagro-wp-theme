@@ -96,4 +96,43 @@ function register_carbon_fields_blocks()
         ],
       ]),
     ]);
+
+  Container::make('post_meta', 'Главная')
+    ->where('post_type', '=', 'page')
+    ->where('post_template', '=', 'templates/home.php')
+    ->add_tab('Начальный экран', [
+      Field::make('complex', 'intro_slider', 'Слайдер')->add_fields([
+        Field::make('textarea', 'certificate', 'Сертификат')->set_rows(2),
+        Field::make('textarea', 'slogan', 'Слоган')->set_rows(2),
+        Field::make('textarea', 'description_1', 'Описание 1')->set_rows(2),
+        Field::make('textarea', 'description_2', 'Описание 2')->set_rows(2),
+        Field::make('textarea', 'description_3', 'Описание 3')->set_rows(2),
+        Field::make('textarea', 'description_4', 'Описание 4')->set_rows(2),
+        Field::make('textarea', 'description_5', 'Описание 5')->set_rows(2),
+      ]),
+    ])
+    ->add_tab('О компании', [
+      Field::make('text', 'about_anchor', 'Якорь'),
+      Field::make('textarea', 'about_title', 'Заголовок')->set_rows(2),
+      Field::make('image', 'about_image', 'Изображение'),
+      Field::make('rich_text', 'about_primary_content', 'Описание основное'),
+      Field::make('rich_text', 'about_secondary_content', 'Описание дополнительное'),
+    ])
+    ->add_tab('Уникальность', [Field::make('rich_text', 'unique_content', 'Описание')])
+    ->add_tab('Испытания', [
+      Field::make('text', 'trials_anchor', 'Якорь'),
+      Field::make('textarea', 'trials_title', 'Заголовок')->set_rows(2),
+      Field::make('textarea', 'trials_title_alt', 'Дполнительный заголовок')->set_rows(2),
+      Field::make('text', 'trials_more_link', 'Ссылка подробнее'),
+      Field::make('image', 'trials_image', 'Фото'),
+      Field::make('rich_text', 'trials_text_1', 'Описание 1'),
+      Field::make('rich_text', 'trials_text_2', 'Описание 2'),
+      Field::make('rich_text', 'trials_text_3', 'Описание 3'),
+      Field::make('association', 'trials_categories', 'Рубрики')->set_types([
+        [
+          'type' => 'term',
+          'taxonomy' => 'category',
+        ],
+      ]),
+    ]);
 }
