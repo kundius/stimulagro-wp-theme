@@ -29,6 +29,8 @@ Template Name: Контакты
       </div>
     </div>
 
+    <?php get_template_part('partials/delivery'); ?>
+
     <?php get_template_part('partials/footer'); ?>
   </div>
 </body>

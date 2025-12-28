@@ -266,8 +266,19 @@ Template Name: Продукт
     </div>
 
     <?php get_template_part('partials/delivery'); ?>
-    <?php get_template_part('partials/feedback'); ?>
-    <?php get_template_part('partials/legal'); ?>
+
+    <section class="feedback-section">
+      <div class="container">
+        <?php get_template_part('partials/feedback'); ?>
+      </div>
+    </section>
+
+    <section class="legal-section">
+      <div class="container">
+        <?php get_template_part('partials/legal'); ?>
+      </div>
+    </section>
+
     <?php get_template_part('partials/footer'); ?>
   </div>
 </body>

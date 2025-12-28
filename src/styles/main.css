@@ -510,13 +510,13 @@ body {
   text-decoration: underline;
 }
 
-.feedback {
+.feedback-section {
   background: #fff;
   position: relative;
   z-index: 20;
 }
 
-.feedback__main {
+.feedback {
   position: relative;
   border-radius: 60px;
   padding-top: 70px;
@@ -694,7 +694,7 @@ body {
   background-color: #303437;
 }
 
-.legal {
+.legal-section {
   padding-top: 72px;
   padding-bottom: 80px;
   background: #fff;
@@ -706,7 +706,7 @@ body {
   }
 }
 
-.legal__layout {
+.legal {
   margin-left: calc(var(--add-padding) * 2);
   margin-right: calc(var(--add-padding) * 2);
   display: grid;
@@ -723,7 +723,7 @@ body {
   }
 }
 
-.legal__layout-cell {
+.legal__cell {
   min-width: 0;
 }
 
@@ -1321,8 +1321,8 @@ body {
 }
 
 .page-section {
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding-top: 64px;
+  padding-bottom: 64px;
   flex-grow: 1;
 }
 
