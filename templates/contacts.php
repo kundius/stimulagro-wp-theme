@@ -26,11 +26,13 @@ Template Name: Контакты
           <?php the_content(); ?>
         </div>
 
-        <?php get_template_part('partials/legal-list'); ?>
+        <div class="mt-16">
+          <?php get_template_part('partials/legal-list'); ?>
+        </div>
       </div>
     </div>
 
-    <section class="delivery pt-16">
+    <section class="delivery delivery--without-title">
       <div class="container">
         <?php if ($title = carbon_get_theme_option('crb_delivery_title')): ?>
         <div class="delivery__title">
