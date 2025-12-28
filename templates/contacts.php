@@ -39,13 +39,12 @@ Template Name: Контакты
           <?php echo nl2br($title); ?>
         </div>
         <?php endif; ?>
-        <?php get_template_part('partials/delivery-content'); ?>
-      </div>
-    </section>
 
-    <section class="feedback-section pb-16">
-      <div class="container">
-        <?php get_template_part('partials/feedback-form'); ?>
+        <?php get_template_part('partials/delivery-content'); ?>
+
+        <div class="mt-12">
+          <?php get_template_part('partials/feedback-form'); ?>
+        </div>
       </div>
     </section>
 
