@@ -32,7 +32,7 @@ Template Name: Контакты
 
     <?php get_template_part('partials/delivery-section'); ?>
 
-    <section class="feedback-section">
+    <section class="feedback-section pt-4 pb-8">
       <div class="container">
         <?php get_template_part('partials/feedback-form'); ?>
       </div>
