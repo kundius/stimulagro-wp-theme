@@ -251,6 +251,14 @@ body {
   position: relative;
   overflow: hidden;
   z-index: 10;
+
+  @media (--max-md) {
+    padding-top: 96px;
+  }
+}
+
+.delivery:has(.page-anchor) {
+  padding-top: 116px;
 }
 
 .delivery::before {
@@ -273,6 +281,10 @@ body {
   }
 }
 
+.delivery:has(.page-anchor)::before {
+  top: -52px;
+}
+
 .delivery::after {
   content: '';
   position: absolute;
@@ -288,10 +300,18 @@ body {
   }
 }
 
+.delivery:has(.page-anchor)::after {
+  top: calc(480px + 600px);
+}
+
 .delivery .page-anchor {
-  margin-left: 50%;
-  margin-top: 6px;
-  margin-bottom: 30px;
+  position: absolute;
+  left: 50%;
+  top: 70px;
+
+  @media (--max-md) {
+    top: 68px;
+  }
 }
 
 .delivery__title {
