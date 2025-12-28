@@ -16,13 +16,13 @@ Template Name: Контакты
   <div class="flex flex-col min-h-screen">
     <?php get_template_part('partials/header'); ?>
 
-    <div class="contacts-section">
+    <div class="page-section">
       <div class="container">
-        <div class="page-anchor" data-page-anchor="<?php the_title(); ?>"></div>
-        <h1 class="contacts-section__title">
+        <h1 class="page-section__title">
           <?php the_title(); ?>
         </h1>
-        <div class="contacts-section__content">
+
+        <div class="page-section__content">
           <?php the_content(); ?>
         </div>
 
@@ -32,7 +32,7 @@ Template Name: Контакты
 
     <?php get_template_part('partials/delivery-section'); ?>
 
-    <section class="feedback-section pt-4 pb-8">
+    <section class="feedback-section pb-16">
       <div class="container">
         <?php get_template_part('partials/feedback-form'); ?>
       </div>
