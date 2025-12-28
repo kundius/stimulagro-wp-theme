@@ -1319,3 +1319,35 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+.page-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
+.page-section__title {
+  font-size: 36px;
+  text-align: center;
+  color: #272935;
+  line-height: 1.2;
+  margin-bottom: 64px;
+  text-wrap: balance;
+
+  @media (--max-md) {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.page-section__content {
+  font-size: 18px;
+  line-height: 1.25;
+  color: #1f212a;
+  margin-left: calc(var(--add-padding) * 2);
+  margin-right: calc(var(--add-padding) * 2);
+
+  @media (--max-md) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
