@@ -16,7 +16,7 @@ Template Name: Продукт
   <div class="flex flex-col min-h-screen">
     <?php get_template_part('partials/header'); ?>
 
-    <a href="#" class="header-instruction">
+    <a href="<?php the_permalink(63); ?>" class="header-instruction">
       <span class="header-instruction__icon">
         <span class="icon icon-instruction"></span>
       </span>

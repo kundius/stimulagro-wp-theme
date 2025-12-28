@@ -1323,6 +1323,7 @@ body {
 .page-section {
   padding-top: 96px;
   padding-bottom: 96px;
+  flex-grow: 1;
 }
 
 .page-section__title {
