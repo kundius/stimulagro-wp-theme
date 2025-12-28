@@ -28,7 +28,9 @@ Template Name: Контакты
 
         <?php get_template_part('partials/legal-list'); ?>
       </div>
-    </div><section class="delivery" data-page-anchor-boundary>
+    </div>
+
+    <section class="delivery pt-16">
       <div class="container">
         <?php if ($title = carbon_get_theme_option('crb_delivery_title')): ?>
         <div class="delivery__title">
