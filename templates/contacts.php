@@ -32,7 +32,7 @@ Template Name: Контакты
       </div>
     </div>
 
-    <section class="delivery delivery--without-title">
+    <section class="delivery">
       <div class="container">
         <?php if ($title = carbon_get_theme_option('crb_delivery_title')): ?>
         <div class="delivery__title">

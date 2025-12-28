@@ -246,19 +246,11 @@ body {
 }
 
 .delivery {
-  padding-top: 116px;
+  padding-top: 64px;
   padding-bottom: 64px;
   position: relative;
   overflow: hidden;
   z-index: 10;
-
-  @media (--max-md) {
-    padding-top: 96px;
-  }
-}
-
-.delivery--without-title {
-  padding-top: 64px;
 }
 
 .delivery::before {
@@ -297,13 +289,9 @@ body {
 }
 
 .delivery .page-anchor {
-  position: absolute;
-  left: 50%;
-  top: 70px;
-
-  @media (--max-md) {
-    top: 68px;
-  }
+  margin-left: 50%;
+  margin-top: 6px;
+  margin-bottom: 30px;
 }
 
 .delivery__title {
