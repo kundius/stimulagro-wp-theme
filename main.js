@@ -1,10 +1,10 @@
 import './src/fonts/Montserrat/stylesheet.css'
-import './src/styles/tailwindcss.css'
 import './src/styles/icons.css'
 import './src/styles/main.css'
 import './src/styles/header.css'
 import './src/styles/template-product.css'
 import './src/styles/template-home.css'
+import './src/styles/tailwindcss.css'
 
 import { initStickyHeader } from './src/scripts/sticky-header'
 import fslightbox from 'fslightbox'
