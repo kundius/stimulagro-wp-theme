@@ -1266,6 +1266,7 @@ body {
   align-items: flex-end;
   gap: 8px;
   z-index: 100;
+  pointer-events: none;
 
   @media (--max-3xl) {
     right: calc((100vw - 1536px) / 2 + (var(--container-padding) / 2));
@@ -1277,6 +1278,7 @@ body {
 }
 
 .sticky-nav__item {
+  pointer-events: all;
   min-width: 56px;
   position: relative;
   height: 32px;

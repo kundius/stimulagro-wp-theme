@@ -12,6 +12,7 @@ import { initCallButton } from './src/scripts/call-button'
 import { initMobileMenu } from './src/scripts/mobile-menu'
 import { initCallbackButton } from './src/scripts/callback-button'
 import { initPageAnchor } from './src/scripts/page-anchor'
+import { initGumatSlideshow } from './src/scripts/gumat-slideshow'
 
 new MaskInput('[data-maska]')
 
@@ -20,3 +21,4 @@ initCallButton()
 initMobileMenu()
 initCallbackButton()
 initPageAnchor()
+initGumatSlideshow()

@@ -25,63 +25,76 @@ Template Name: Главная
       </span>
     </a>
 
-    <section class="gumat">
+    <?php if ($intro_slider = carbon_get_the_post_meta('intro_slider')): ?>
+    <section class="gumat-section">
       <div class="container">
-        <div class="gumat__wrap">
-          <div class="gumat__inner">
-            <div class="gumat__image-1"></div>
-            <div class="gumat__image-2"></div>
-            <?php if ($certificate = carbon_get_the_post_meta('intro_certificate')): ?>
-            <div class="gumat__certificate"><?php echo nl2br($certificate); ?></div>
-            <?php endif; ?>
-            <div class="gumat__image-3"></div>
-            <?php if ($description_1 = carbon_get_the_post_meta('intro_description_1')): ?>
-            <div class="gumat__description_1">
-              <span class="gumat__description_1-misc-1"></span>
-              <span class="gumat__description_1-misc-2"></span>
-              <span class="gumat__description_1-misc-3"></span>
-              <?php echo nl2br($description_1); ?>
+        <div class="gumat-slideshow" data-gumat-slideshow>
+          <div class="gumat-slideshow__viewport" data-gumat-slideshow-viewport>
+            <div class="gumat-slideshow__container">
+              <?php foreach ($intro_slider as $slide): ?>
+              <div class="gumat-slideshow__sldie">
+                <div class="gumat-product">
+                  <div class="gumat-product__image-1"></div>
+                  <div class="gumat-product__image-2"></div>
+                  <?php if ($certificate = $slide['certificate']): ?>
+                  <div class="gumat-product__certificate"><?php echo nl2br($certificate); ?></div>
+                  <?php endif; ?>
+                  <div class="gumat-product__image-3"></div>
+                  <?php if ($description_1 = $slide['description_1']): ?>
+                  <div class="gumat-product__description_1">
+                  <span class="gumat-product__description_1-misc-1"></span>
+                  <span class="gumat-product__description_1-misc-2"></span>
+                  <span class="gumat-product__description_1-misc-3"></span>
+                  <?php echo nl2br($description_1); ?>
+                  </div>
+                  <?php endif; ?>
+                  <?php if ($description_2 = $slide['description_2']): ?>
+                  <div class="gumat-product__description_2">
+                  <span class="gumat-product__description_2-misc-1"></span>
+                  <span class="gumat-product__description_2-misc-2"></span>
+                  <span class="gumat-product__description_2-misc-3"></span>
+                  <?php echo nl2br($description_2); ?>
+                  </div>
+                  <?php endif; ?>
+                  <?php if ($description_3 = $slide['description_3']): ?>
+                  <div class="gumat-product__description_3">
+                  <span class="gumat-product__description_3-misc-1"></span>
+                  <span class="gumat-product__description_3-misc-2"></span>
+                  <span class="gumat-product__description_3-misc-3"></span>
+                  <?php echo nl2br($description_3); ?>
+                  </div>
+                  <?php endif; ?>
+                  <?php if ($description_4 = $slide['description_4']): ?>
+                  <div class="gumat-product__description_4">
+                  <span class="gumat-product__description_4-misc-1"></span>
+                  <span class="gumat-product__description_4-misc-2"></span>
+                  <span class="gumat-product__description_4-misc-3"></span>
+                  <?php echo nl2br($description_4); ?>
+                  </div>
+                  <?php endif; ?>
+                  <?php if ($description_5 = $slide['description_5']): ?>
+                  <div class="gumat-product__description_5">
+                  <span class="gumat-product__description_5-misc-1"></span>
+                  <span class="gumat-product__description_5-misc-2"></span>
+                  <span class="gumat-product__description_5-misc-3"></span>
+                  <?php echo nl2br($description_5); ?>
+                  </div>
+                  <?php endif; ?>
+                  <?php if ($slogan = $slide['slogan']): ?>
+                  <div class="gumat-product__slogan"><?php echo nl2br($slogan); ?></div>
+                  <?php endif; ?>
+                </div>
+              </div>
+              <?php endforeach; ?>
             </div>
-            <?php endif; ?>
-            <?php if ($description_2 = carbon_get_the_post_meta('intro_description_2')): ?>
-            <div class="gumat__description_2">
-              <span class="gumat__description_2-misc-1"></span>
-              <span class="gumat__description_2-misc-2"></span>
-              <span class="gumat__description_2-misc-3"></span>
-              <?php echo nl2br($description_2); ?>
-            </div>
-            <?php endif; ?>
-            <?php if ($description_3 = carbon_get_the_post_meta('intro_description_3')): ?>
-            <div class="gumat__description_3">
-              <span class="gumat__description_3-misc-1"></span>
-              <span class="gumat__description_3-misc-2"></span>
-              <span class="gumat__description_3-misc-3"></span>
-              <?php echo nl2br($description_3); ?>
-            </div>
-            <?php endif; ?>
-            <?php if ($description_4 = carbon_get_the_post_meta('intro_description_4')): ?>
-            <div class="gumat__description_4">
-              <span class="gumat__description_4-misc-1"></span>
-              <span class="gumat__description_4-misc-2"></span>
-              <span class="gumat__description_4-misc-3"></span>
-              <?php echo nl2br($description_4); ?>
-            </div>
-            <?php endif; ?>
-            <?php if ($description_5 = carbon_get_the_post_meta('intro_description_5')): ?>
-            <div class="gumat__description_5">
-              <span class="gumat__description_5-misc-1"></span>
-              <span class="gumat__description_5-misc-2"></span>
-              <span class="gumat__description_5-misc-3"></span>
-              <?php echo nl2br($description_5); ?>
-            </div>
-            <?php endif; ?>
-            <?php if ($slogan = carbon_get_the_post_meta('intro_slogan')): ?>
-            <div class="gumat__slogan"><?php echo nl2br($slogan); ?></div>
-            <?php endif; ?>
           </div>
+          <div class="gumat-slideshow__dots" data-gumat-slideshow-dots></div>
+          <button class="gumat-slideshow__control" type="button" data-gumat-slideshow-prev></button>
+          <button class="gumat-slideshow__control" type="button" data-gumat-slideshow-next></button>
         </div>
       </div>
     </section>
+    <?php endif; ?>
 
     <section class="about" data-page-anchor-boundary>
       <div class="container">

@@ -229,7 +229,7 @@
   border-radius: 23px;
   padding: 0 16px;
   gap: 8px;
-  z-index: 20;
+  z-index: 30;
 
   @media (--max-3xl) {
     left: calc((var(--container-padding) / 2));
