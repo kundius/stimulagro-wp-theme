@@ -4,6 +4,7 @@ import './src/styles/icons.css'
 import './src/styles/main.css'
 import './src/styles/header.css'
 import './src/styles/template-product.css'
+import './src/styles/template-home.css'
 
 import { initStickyHeader } from './src/scripts/sticky-header'
 import fslightbox from 'fslightbox'
