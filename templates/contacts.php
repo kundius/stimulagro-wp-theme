@@ -16,7 +16,7 @@ Template Name: Контакты
   <div class="flex flex-col min-h-screen">
     <?php get_template_part('partials/header'); ?>
 
-    <div class="page-section">
+    <section class="page-section">
       <div class="container">
         <h1 class="page-section__title">
           <?php the_title(); ?>
@@ -29,7 +29,11 @@ Template Name: Контакты
         <div class="mt-16">
           <?php get_template_part('partials/legal'); ?>
         </div>
+      </div>
+    </section>
 
+    <div class="bgs2">
+      <div class="container">
         <div class="mt-16">
           <?php get_template_part('partials/delivery'); ?>
         </div>

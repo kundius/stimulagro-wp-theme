@@ -245,6 +245,47 @@ body {
   }
 }
 
+.bgs2 {
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.bgs2::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-image: url('../images/usage-wave.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: 50% 50%;
+  height: 652px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  transform: translateY(480px);
+
+  @media (--max-lg) {
+    height: 326px;
+    transform: translateY(480px);
+  }
+}
+
+.bgs2::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  top: calc(480px + 536px);
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+
+  @media (--max-lg) {
+    top: calc(480px + 210px);
+  }
+}
+
 /*.delivery {
   --padding-top: 64px;
 
