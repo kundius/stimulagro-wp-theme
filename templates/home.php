@@ -222,9 +222,11 @@ Template Name: Главная
     </section>
     <?php endif; ?>
 
-    <?php get_template_part('partials/delivery-section'); ?>
-    <?php get_template_part('partials/feedback-section'); ?>
-    <?php get_template_part('partials/legal-section'); ?>
+    <?php get_template_part('partials/delivery', null, [
+      'anchor' => carbon_get_theme_option('crb_delivery_anchor'),
+    ]); ?>
+    <?php get_template_part('partials/feedback'); ?>
+    <?php get_template_part('partials/legal'); ?>
     <?php get_template_part('partials/footer'); ?>
   </div>
 </body>

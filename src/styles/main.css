@@ -245,7 +245,7 @@ body {
   }
 }
 
-.delivery {
+/*.delivery {
   --padding-top: 64px;
 
   padding-top: var(--padding-top);
@@ -306,6 +306,9 @@ body {
   @media (--max-md) {
     top: 68px;
   }
+}*/
+
+.delivery {
 }
 
 .delivery__title {
@@ -516,12 +519,6 @@ body {
   text-decoration: underline;
 }
 
-.feedback-section {
-  background: #fff;
-  position: relative;
-  z-index: 20;
-}
-
 .feedback {
   position: relative;
   border-radius: 60px;
@@ -698,18 +695,6 @@ body {
   transition-duration: 0.3s;
   border-color: #303437;
   background-color: #303437;
-}
-
-.legal-section {
-  padding-top: 72px;
-  padding-bottom: 80px;
-  background: #fff;
-  overflow: hidden;
-
-  @media (--max-md) {
-    padding-top: 64px;
-    padding-bottom: 64px;
-  }
 }
 
 .legal {

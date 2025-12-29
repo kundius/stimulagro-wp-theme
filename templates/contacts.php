@@ -29,24 +29,16 @@ Template Name: Контакты
         <div class="mt-16">
           <?php get_template_part('partials/legal-list'); ?>
         </div>
+
+        <div class="mt-16">
+          <?php get_template_part('partials/delivery'); ?>
+        </div>
+
+        <div class="mt-16">
+          <?php get_template_part('partials/feedback'); ?>
+        </div>
       </div>
     </div>
-
-    <section class="delivery">
-      <div class="container">
-        <?php if ($title = carbon_get_theme_option('crb_delivery_title')): ?>
-        <div class="delivery__title">
-          <?php echo nl2br($title); ?>
-        </div>
-        <?php endif; ?>
-
-        <?php get_template_part('partials/delivery-content'); ?>
-
-        <div class="mt-12">
-          <?php get_template_part('partials/feedback-form'); ?>
-        </div>
-      </div>
-    </section>
 
     <?php get_template_part('partials/footer'); ?>
   </div>
