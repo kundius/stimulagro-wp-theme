@@ -137,7 +137,10 @@ function register_carbon_fields_blocks()
     ]);
 
   Block::make('warning', 'Внимание')
-    ->add_fields([Field::make('textarea', 'content', 'Содержимое')->set_rows(2)])
+    ->add_fields([
+      Field::make('separator', 'separator', 'Внимание'),
+      Field::make('textarea', 'content', 'Содержимое')->set_rows(2),
+    ])
     ->set_category('layout')
     ->set_mode('edit')
     ->set_icon('shortcode')
@@ -149,6 +152,7 @@ function register_carbon_fields_blocks()
 
   Block::make('usage', 'Внесение')
     ->add_fields([
+      Field::make('separator', 'separator', 'Внесение'),
       Field::make('complex', 'options', 'Опции')->add_fields([
         Field::make('image', 'photo', 'Фото')->set_help_text('Изображение размером 300х200'),
         Field::make('textarea', 'name', 'Название')->set_rows(2),
