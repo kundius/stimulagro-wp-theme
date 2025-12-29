@@ -136,9 +136,9 @@ function register_carbon_fields_blocks()
       ]),
     ]);
 
-  Block::make('warning', 'Внимание')
+  Block::make('warning', 'Блок "Внимание"')
     ->add_fields([
-      Field::make('separator', 'separator', 'Внимание'),
+      Field::make('separator', 'separator', 'Блок "Внимание"'),
       Field::make('textarea', 'content', 'Содержимое')->set_rows(2),
     ])
     ->set_category('layout')
@@ -150,9 +150,9 @@ function register_carbon_fields_blocks()
       ]);
     });
 
-  Block::make('usage', 'Внесение')
+  Block::make('usage', 'Блок "Внесение"')
     ->add_fields([
-      Field::make('separator', 'separator', 'Внесение'),
+      Field::make('separator', 'separator', 'Блок "Внесение"'),
       Field::make('complex', 'options', 'Опции')->add_fields([
         Field::make('image', 'photo', 'Фото')->set_help_text('Изображение размером 300х200'),
         Field::make('textarea', 'name', 'Название')->set_rows(2),
