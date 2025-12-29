@@ -223,7 +223,7 @@ Template Name: Главная
     <?php endif; ?>
 
     <div class="bgs3">
-      <div class="container flex flex-col gap-16">
+      <div class="container flex flex-col gap-16 pb-16">
         <?php get_template_part('partials/delivery', null, [
           'anchor' => carbon_get_theme_option('crb_delivery_anchor'),
         ]); ?>
