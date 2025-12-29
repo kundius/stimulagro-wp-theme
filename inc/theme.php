@@ -71,3 +71,17 @@ function create_attachment_from_upload($upload, $post_id = 0)
 
   return $attachment_id;
 }
+
+function get_pagination($query)
+{
+  $links = paginate_links([
+    'prev_text' => '<span class="icon icon-arrow-left"></span>',
+    'next_text' => '<span class="icon icon-arrow-right"></span>',
+    'total' => $query->max_num_pages,
+    'current' => max(1, get_query_var('paged')),
+  ]);
+
+  if ($links) {
+    return '<div class="pagination">' . $links . '</div>';
+  }
+}
