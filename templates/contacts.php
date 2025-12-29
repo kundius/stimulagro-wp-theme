@@ -22,9 +22,11 @@ Template Name: Контакты
           <?php the_title(); ?>
         </h1>
 
+        <?php if ($content = get_the_content()): ?>
         <div class="page-section__content">
-          <?php the_content(); ?>
+          <?php echo $content; ?>
         </div>
+        <?php endif; ?>
 
         <?php get_template_part('partials/legal'); ?>
       </div>
