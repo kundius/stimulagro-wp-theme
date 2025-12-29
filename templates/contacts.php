@@ -17,7 +17,7 @@ Template Name: Контакты
     <?php get_template_part('partials/header'); ?>
 
     <section class="page-section">
-      <div class="container">
+      <div class="container page-section__container">
         <h1 class="page-section__title">
           <?php the_title(); ?>
         </h1>
@@ -26,9 +26,7 @@ Template Name: Контакты
           <?php the_content(); ?>
         </div>
 
-        <div class="mt-16">
-          <?php get_template_part('partials/legal'); ?>
-        </div>
+        <?php get_template_part('partials/legal'); ?>
       </div>
     </section>
 

@@ -12,7 +12,7 @@
     <?php get_template_part('partials/header'); ?>
 
     <div class="page-section">
-      <div class="container">
+      <div class="container page-section__container">
         <h1 class="page-section__title">
           <?php the_title(); ?>
         </h1>

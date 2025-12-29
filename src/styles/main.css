@@ -1363,12 +1363,11 @@ body {
   text-align: center;
   color: #272935;
   line-height: 1.2;
-  margin-bottom: 64px;
+  margin: 0;
   text-wrap: balance;
 
   @media (--max-md) {
     font-size: 32px;
-    margin-bottom: 32px;
   }
 }
 
@@ -1382,6 +1381,16 @@ body {
   @media (--max-md) {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+.page-section__container {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+
+  @media (--max-md) {
+    gap: 32px;
   }
 }
 
