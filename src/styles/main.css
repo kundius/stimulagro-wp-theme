@@ -1326,6 +1326,32 @@ body {
   }
 }
 
+.page-section__content p {
+  margin: 0;
+}
+
+.page-section__content * + p {
+  margin-top: 24px;
+}
+
+.page-section__content h2 {
+  margin: 0;
+}
+
+.page-section__content * + h2 {
+  margin-top: 32px;
+  font-size: 32px;
+}
+
+.page-section__content h3 {
+  margin: 0;
+}
+
+.page-section__content * + h3 {
+  margin-top: 32px;
+  font-size: 24px;
+}
+
 .page-section__container {
   display: flex;
   flex-direction: column;

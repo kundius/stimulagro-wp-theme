@@ -135,4 +135,37 @@ function register_carbon_fields_blocks()
         ],
       ]),
     ]);
+
+  Block::make('warning', 'Карта')
+    ->add_fields([Field::make('textarea', 'content', 'Содержимое')->set_rows(2)])
+    ->set_category('layout')
+    ->set_mode('edit')
+    ->set_icon('shortcode')
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+      get_template_part('blocks/warning', null, [
+        'fields' => $fields,
+      ]);
+    });
+
+  Block::make('usage', 'Внесение')
+    ->add_fields([
+      Field::make('complex', 'options', 'Опции')->add_fields([
+        Field::make('image', 'photo', 'Фото')->set_help_text('Изображение размером 300х200'),
+        Field::make('textarea', 'name', 'Название')->set_rows(2),
+        Field::make('textarea', 'content', 'Значение')->set_rows(2),
+      ]),
+      Field::make('complex', 'specifications', 'Характеристики')->add_fields([
+        Field::make('image', 'photo', 'Фото')->set_help_text('Изображение размером 128х64'),
+        Field::make('textarea', 'name', 'Название')->set_rows(2),
+        Field::make('textarea', 'content', 'Значение')->set_rows(2),
+      ]),
+    ])
+    ->set_category('layout')
+    ->set_mode('edit')
+    ->set_icon('shortcode')
+    ->set_render_callback(function ($fields, $attributes, $inner_blocks) {
+      get_template_part('blocks/usage', null, [
+        'fields' => $fields,
+      ]);
+    });
 }
