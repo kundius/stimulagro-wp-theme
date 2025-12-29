@@ -1352,6 +1352,26 @@ body {
   font-size: 24px;
 }
 
+.page-section__content .block-warning {
+  margin-right: calc(var(--add-padding) * -2);
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  @media (--max-lg) {
+    margin-right: 0;
+  }
+}
+
+.page-section__content .block-usage {
+  margin-right: calc(var(--add-padding) * -2);
+  margin-top: 48px;
+  margin-bottom: 48px;
+
+  @media (--max-lg) {
+    margin-right: 0;
+  }
+}
+
 .page-section__container {
   display: flex;
   flex-direction: column;

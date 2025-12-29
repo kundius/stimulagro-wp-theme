@@ -27,7 +27,7 @@ $certificates_query = new WP_Query([
 
         <?php if ($content = get_the_content()): ?>
         <div class="page-section__content">
-          <?php echo $content; ?>
+          <?php the_content(); ?>
         </div>
         <?php endif; ?>
       </div>

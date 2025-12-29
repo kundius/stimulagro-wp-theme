@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Контакты
+Template Name: Испытания
 */
 ?>
 <!DOCTYPE html>
@@ -16,7 +16,7 @@ Template Name: Контакты
   <div class="flex flex-col min-h-screen">
     <?php get_template_part('partials/header'); ?>
 
-    <section class="page-section">
+    <div class="page-section">
       <div class="container page-section__container">
         <h1 class="page-section__title">
           <?php the_title(); ?>
@@ -27,20 +27,6 @@ Template Name: Контакты
           <?php the_content(); ?>
         </div>
         <?php endif; ?>
-
-        <?php get_template_part('partials/legal'); ?>
-      </div>
-    </section>
-
-    <div class="bgs2">
-      <div class="container">
-        <div class="my-16">
-          <?php get_template_part('partials/delivery'); ?>
-        </div>
-
-        <div class="my-16">
-          <?php get_template_part('partials/feedback'); ?>
-        </div>
       </div>
     </div>
 
