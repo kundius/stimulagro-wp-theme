@@ -27,7 +27,7 @@ Template Name: Контакты
         </div>
 
         <div class="mt-16">
-          <?php get_template_part('partials/legal-list'); ?>
+          <?php get_template_part('partials/legal'); ?>
         </div>
 
         <div class="mt-16">
