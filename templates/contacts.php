@@ -34,11 +34,9 @@ Template Name: Контакты
 
     <div class="bgs2">
       <div class="container">
-        <div class="mt-16">
-          <?php get_template_part('partials/delivery'); ?>
-        </div>
+        <?php get_template_part('partials/delivery'); ?>
 
-        <div class="mt-16">
+        <div class="my-16">
           <?php get_template_part('partials/feedback'); ?>
         </div>
       </div>
