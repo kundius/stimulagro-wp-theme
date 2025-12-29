@@ -261,7 +261,7 @@ body {
   background-position: 50% 50%;
   height: 652px;
   width: 100%;
-  top: -116px;
+  top: -48px;
   left: 0;
   transform: translateY(480px);
 
@@ -275,14 +275,14 @@ body {
   content: '';
   position: absolute;
   z-index: -1;
-  top: calc(652px - 116px + 480px);
+  top: calc(652px - 48px + 480px);
   left: 0;
   bottom: 0;
   right: 0;
   background: #fff;
 
   @media (--max-lg) {
-    top: calc(326px + 480px - 116px);
+    top: calc(326px + 480px - 48px);
   }
 }
 
