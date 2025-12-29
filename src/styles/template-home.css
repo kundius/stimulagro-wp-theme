@@ -3,14 +3,7 @@
   padding-bottom: 64px;
   position: relative;
   overflow: hidden;
-  padding-left: 40px;
-  padding-right: 40px;
   z-index: 1;
-
-  @media (--max-xl) {
-    padding-left: 24px;
-    padding-right: 24px;
-  }
 
   @media (--max-md) {
     padding-top: 96px;
@@ -68,34 +61,6 @@
   }
 }
 
-/*.certificates::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  background-image: url('../images/usage-wave.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: 50% 50%;
-  height: 360px;
-  width: 100%;
-  top: 0;
-  left: 0;
-}
-
-.certificates::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  background-image: url('../images/bgs-third-wave.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: 50% 50%;
-  height: 360px;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-}*/
-
 .certificates .page-anchor {
   position: absolute;
   left: 50%;
@@ -137,8 +102,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+  z-index: 1;
 
   @media (--max-xl) {
+    padding-left: 24px;
+    padding-right: 24px;
     gap: 24px;
   }
 
