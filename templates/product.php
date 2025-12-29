@@ -265,7 +265,7 @@ Template Name: Продукт
       <?php endif; ?>
     </div>
 
-    <div class="bgs2">
+    <div class="bgs3">
       <div class="container">
         <?php get_template_part('partials/delivery', null, [
           'anchor' => carbon_get_theme_option('crb_delivery_anchor'),
