@@ -136,7 +136,7 @@ function register_carbon_fields_blocks()
       ]),
     ]);
 
-  Block::make('warning', 'Карта')
+  Block::make('warning', 'Внимание')
     ->add_fields([Field::make('textarea', 'content', 'Содержимое')->set_rows(2)])
     ->set_category('layout')
     ->set_mode('edit')
