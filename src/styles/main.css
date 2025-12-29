@@ -286,54 +286,12 @@ body {
   }
 }
 
-.bgs3 {
-  position: relative;
-  overflow: hidden;
-  z-index: 10;
-}
-
-.bgs3::before {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  background-image: url('../images/usage-wave.png');
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-position: 50% 50%;
-  height: 652px;
-  width: 100%;
-  top: 0;
-  left: 0;
-  transform: translateY(480px);
-
-  @media (--max-lg) {
-    height: 326px;
-    transform: translateY(480px);
-  }
-}
-
-.bgs3::after {
-  content: '';
-  position: absolute;
-  z-index: -1;
-  top: calc(652px + 480px);
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: #fff;
-
-  @media (--max-lg) {
-    top: calc(326px + 480px);
-  }
-}
-
 .delivery {
 }
 
 .delivery .page-anchor {
   margin-left: 50%;
   margin-bottom: 16px;
-  margin-top: 80px;
 }
 
 .delivery__title {

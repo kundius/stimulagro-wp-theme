@@ -265,13 +265,19 @@ Template Name: Продукт
       <?php endif; ?>
     </div>
 
-    <div class="bgs3">
-      <div class="container flex flex-col gap-16 pb-16">
-        <?php get_template_part('partials/delivery', null, [
-          'anchor' => carbon_get_theme_option('crb_delivery_anchor'),
-        ]); ?>
-        <?php get_template_part('partials/feedback'); ?>
-        <?php get_template_part('partials/legal'); ?>
+    <div class="bgs2">
+      <div class="container">
+        <div class="my-16">
+          <?php get_template_part('partials/delivery', null, [
+            'anchor' => carbon_get_theme_option('crb_delivery_anchor'),
+          ]); ?>
+        </div>
+        <div class="my-16">
+          <?php get_template_part('partials/feedback'); ?>
+        </div>
+        <div class="my-16">
+          <?php get_template_part('partials/legal'); ?>
+        </div>
       </div>
     </div>
 

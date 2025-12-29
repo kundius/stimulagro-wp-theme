@@ -222,7 +222,7 @@ Template Name: Главная
     </section>
     <?php endif; ?>
 
-    <div class="bgs3">
+    <div class="bgs2">
       <div class="container">
         <div class="my-16">
           <?php get_template_part('partials/delivery', null, [
